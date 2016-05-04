@@ -1,0 +1,36 @@
+블록이나 nesting될 때 : compound_stmt(isCompound_stmt) 
+if절이나 함수 시작 : if_stmt(isIf_stmt) / fun_decl(isFun_decl)
+2진 연산자와 피연산자 : expr(isBinaryOperation)
+일반 괄호 : expr(isParen)
+
+while : while문
+
+decl : 변수나 함수 선언
+
+fun_decl : 함수 선언
+
+if_stmt : if문
+
+program : decl+
+
+params : 파라미터(void 포함)
+
+expr_stmt : ;가 맨 끝에 붙는 모든 실행문
+
+compound_stmt : {} 블록 안에 있는 문장
+
+args : 매개변수(사용 x)
+
+local_decl : 지역변수 선언(배열도 포함)
+
+type_spec : ID나 Integer 등등
+
+param : 함수 선언에 사용(매개변수)
+
+expr : expr_stmt에 사용되는 모든 것(;만 제외된다.)
+
+var_decl : 변수 선언(배열도 포함)
+
+stmt : expr_stmt + if_stmt + while_stmt + return_stmt
+
+return_stmt : 리턴할 때 expr을 포함하는 문장
